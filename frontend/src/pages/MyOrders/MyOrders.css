@@ -79,3 +79,17 @@
   .icon, .fa, .material-icons { font-size: 18px !important; line-height: 1 !important; }
 }
 /* End of responsive helpers */
+
+.loading-text {
+  text-align: center;
+  color: #555;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.no-orders-text {
+  text-align: center;
+  color: #777;
+  font-size: 18px;
+  margin-top: 20px;
+}
