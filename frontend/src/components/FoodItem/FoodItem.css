@@ -146,3 +146,9 @@
   .food-item-price { font-size: 18px; }
 }
 /* End of responsive helpers */
+
+@keyframes shimmer {
+  0% { background-position: -400% 0; }
+  100% { background-position: 400% 0; }
+}
+.image-placeholder { min-height: 160px; }
