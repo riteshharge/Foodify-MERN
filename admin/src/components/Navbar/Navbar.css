@@ -1,0 +1,74 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 4%;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* .navbar .logo {
+  width: max(10%, 80px);
+  cursor: pointer;
+} */
+
+.navbar .logo {
+  width: 120px;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.navbar .profile {
+  width: 40px;
+  border-radius: 50%;
+}
+
+/* Logout looks like a red button */
+.logout-btn {
+  background-color: #ff4b5c;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 6px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #e63946;
+}
+
+/* Login looks like normal clickable text */
+.login-condition {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.login-condition:hover {
+  color: #007bff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 8px 5%;
+  }
+  .logout-btn {
+    font-size: 14px;
+    padding: 5px 12px;
+  }
+  .login-condition {
+    font-size: 16px;
+  }
+}

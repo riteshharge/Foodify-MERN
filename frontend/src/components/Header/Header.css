@@ -1,0 +1,100 @@
+/* Main Header Section */
+.header {
+  height: 34vw;
+  margin: 30px auto;
+  background: url("/header_img.png") no-repeat center center;
+  background-size: cover;
+  position: relative;
+  border-radius: 16px; /* smooth edges */
+  overflow: hidden; /* keeps overlay inside */
+}
+
+/* Overlay for readability */
+.header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25); /* soft dark overlay */
+  z-index: 1;
+}
+
+/* Content Container */
+.header-contents {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1.5vw;
+  max-width: 50%;
+  bottom: 10%;
+  left: 6vw;
+  animation: fadeIn 3s ease;
+  z-index: 2; /* ensures text appears above overlay */
+}
+
+/* Headline */
+.header-contents h2 {
+  font-weight: 500;
+  color: #ffffff;
+  font-size: max(4.5vw, 22px);
+}
+
+/* Description Text */
+.header-contents p {
+  color: #ffffff;
+  font-size: 1vw;
+  line-height: 1.5;
+  opacity: 0.95; /* slight transparency for readability */
+}
+
+/* CTA Button */
+.header-contents button {
+  border: none;
+  background-color: #ff4b2b; /* bold orange-red */
+  color: #ffffff; /* white text */
+  font-weight: 600;
+  padding: 1vw 2.3vw;
+  font-size: max(1vw, 13px);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effect for premium feel */
+.header-contents button:hover {
+  background-color: #e63a1f; /* slightly darker red */
+  transform: scale(1.05); /* small zoom animation */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1050px) {
+  .header-contents {
+    max-width: 45%;
+  }
+}
+
+@media (max-width: 750px) {
+  .header-contents {
+    max-width: 65%;
+  }
+
+  .header-contents p {
+    display: none; /* hides text for cleaner mobile UI */
+  }
+
+  .header-contents button {
+    padding: 2vw 4vw;
+  }
+}
+
+/* Optional Fade-In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

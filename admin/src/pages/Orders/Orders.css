@@ -1,0 +1,145 @@
+.orders-page {
+  padding: 30px;
+  background-color: #fafafa;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+}
+
+.orders-page h2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 25px;
+  text-align: center;
+  border-bottom: 3px solid tomato;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* ===== TABLE STYLE ===== */
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.orders-table th,
+.orders-table td {
+  text-align: left;
+  padding: 14px 18px;
+  border-bottom: 1px solid #eee;
+}
+
+.orders-table th {
+  background-color: #f6f5ff;
+  color: #333;
+  font-weight: 600;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.orders-table tr:nth-child(even) {
+  background-color: #f6f5ff;
+}
+
+.orders-table tr:hover {
+  background-color: #ffe1d6;
+  transition: 0.2s ease-in-out;
+}
+
+.orders-table td {
+  font-size: 14px;
+  color: #555;
+}
+
+/* ===== ORDER DETAILS ===== */
+.orders-table td div {
+  margin: 2px 0;
+}
+
+/* ===== STATUS DROPDOWN ===== */
+.orders-table select {
+  background-color: #ffe8e4;
+  border: 1px solid tomato;
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-size: 13px;
+  outline: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.orders-table select:hover {
+  background-color: #c4dd09;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 900px) {
+  .orders-table,
+  .orders-table thead,
+  .orders-table tbody,
+  .orders-table th,
+  .orders-table td,
+  .orders-table tr {
+    display: block;
+  }
+
+  .orders-table thead {
+    display: none;
+  }
+
+  .orders-table tr {
+    margin-bottom: 15px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+    padding: 10px 15px;
+  }
+
+  .orders-table td {
+    border: none;
+    position: relative;
+    padding-left: 50%;
+    font-size: 13px;
+  }
+
+  .orders-table td::before {
+    position: absolute;
+    left: 15px;
+    top: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #333;
+    font-size: 12px;
+    content: attr(data-label);
+  }
+}
+
+/* ===== NO ORDERS MESSAGE ===== */
+.orders-page p {
+  text-align: center;
+  color: #777;
+  margin-top: 30px;
+  font-size: 16px;
+}
+
+.delete-btn {
+  background: #ff4d4f;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin-top: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: block;
+}
+
+.delete-btn:hover {
+  background: #d9363e;
+}

@@ -1,0 +1,32 @@
+.search-results-page {
+  padding: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.search-results-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.back-btn {
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  padding: 6px 8px;
+  cursor: pointer;
+}
+
+.search-results-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.search-empty {
+  text-align: center;
+  margin-top: 48px;
+}
